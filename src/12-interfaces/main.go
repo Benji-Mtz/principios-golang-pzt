@@ -1,6 +1,8 @@
 package main
 
-type fuguras2D interface {
+import "fmt"
+
+type figuras2D interface {
 	area() float64
 }
 
@@ -21,9 +23,19 @@ func (r rectangulo) area() float64 {
 	return r.base * r.altura
 }
 
-func calcular(f fuguras2D)
+func calcular(f figuras2D) {
+	fmt.Println("Area:", f.area())
+}
 
 func main() {
 	myCuadrado := cuadrado{base: 5}
 	myRectangulo := rectangulo{base: 2, altura: 4}
+
+	// Implementando la interfaz para las areas de todas las figuras
+	calcular(myCuadrado)
+	calcular(myRectangulo)
+
+	// Listas de interfaces
+	myInterface := []interface{}{"Hola", 12, 1.50}
+	fmt.Println(myInterface...)
 }

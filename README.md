@@ -107,27 +107,12 @@ func main() {
 }
 ```
 
-## Punteros
+## Concurrencia en Go
+
+* Paralelismo: Es trabajar con varios hilos de ejecución de manera simultanea
+* Concurrencia: Es trabajar con un hilo de ejecución pero optimizando los recursos para realizar las tareas que le fueron asignadas segun vayan concluyendo, no espera a que termine cada tarea al 100%, es decir se va intercalando entre tareas hasta su fin.
 
 ```go
-package main
- 
-import "fmt"
 
-func main() {
-   
-    // Operadores de comparación: >, <, ==, !=, >=, <=
-    fmt.Println(4 > 6) // false
-    fmt.Println(4 < 6) // true
-    fmt.Println(4 == 4) // true
-    fmt.Println(4 != 4) // false
-
-    // Operadores Lógicos &&, ||
-    var age uint = 33
-    fmt.Println("Es Adulto?:", age >= 18 && age <= 60)
-    fmt.Println("Es Niño o Anciano?:", age < 18 || age > 60)
-
-    // Operador lógico Unario: !
-    fmt.Println(!(4 != 4)) // true
 }
 ```
