@@ -12,6 +12,7 @@ func (myPC pc) ping() {
 	fmt.Println(myPC.brand, "Pong")
 }
 
+// con *pc accedemos a los valores del struct
 func (myPC *pc) duplicateRAM() {
 	myPC.ram = myPC.ram * 2
 }
